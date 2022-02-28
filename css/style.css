@@ -1,3 +1,5 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"); 
+
 * {
     margin: 0;
     padding: 0;
@@ -8,9 +10,39 @@ body {
     font-family: 'Lora', serif;
 }
 
+
 nav {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.navbar-toggler {
+    color: rgba(252, 148, 43,0.5) !important;
+    margin-bottom: 10px;
+    background-color: rgba(252, 148, 43,0.3) !important;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar-light .navbar-toggler {
+    border-color: rgba(252, 148, 43) !important;
+}
+
+.navbar-expand-md .navbar-collapse {
+        justify-content: center;  
+}
+
+nav div {
     background-color: rgb(61, 76, 43);
-    height: 60px;
+}
+
+nav div ul li a {
+    color: rgb(252, 148, 43) !important;
+    padding: 10px !important;
+    margin: 0 20px;
+    border-radius: 5px;
 }
 
 header h1 {
@@ -20,6 +52,7 @@ header h1 {
     justify-content: center;
     align-items: center;
     font-size: 40px;
+    margin: 0;
 }
 
 a {
@@ -31,7 +64,7 @@ a {
 nav a:hover {
     text-decoration: none;
     background-color: rgb(252, 148, 43);
-    color: white
+    color: white !important;
 }
 
 nav ul {
@@ -39,7 +72,6 @@ nav ul {
     list-style-type: none;
     font-size: 18px;
     display: flex;
-    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -52,37 +84,7 @@ nav ul {
     text-align: center;
 }
 
-footer {
-    height: 120px;
-    width: 100%;
-    background-color: rgb(61, 76, 43);
-    display: flex;
 
-}
-
-.textoFooter {
-    display: flex;
-    width: 50%;
-    height: 100%;
-    align-items: center;
-    justify-content: end;
-
-}
-
-.linksFooter {
-    display: flex;
-    width: 49%;
-    height: 100%;
-    align-items: center;
-    justify-content: start;
-    padding-left: 10px;
-}
-
-.linksFooter img {
-    height: 40px;
-    display: flex;
-    padding: 0 15px
-}
 
 /*************   ANIMACION ****************/
 
@@ -95,7 +97,6 @@ footer {
          opacity: 1;
      }
 }
-
 
 
 main {
@@ -125,14 +126,12 @@ main {
 
 
 
-    main {
-        padding: 0 50px;
-    }
+  
 
     .grilla {
         display: grid;
         grid-template-columns: 20% 20% 20% 20% 20%;
-        grid-template-rows: 400px 80px 500px;
+        grid-template-rows: 400px 80px 540px;
         grid-template-areas: "banda banda banda texto texto"
                             "titulo titulo titulo titulo titulo"
                             "int1 int2 int3 int4 int5";
@@ -142,14 +141,13 @@ main {
 
     .imgBanda  {
         grid-area: banda;
+        max-width: 650px;
         justify-self: center;
         align-self: center;
+        padding-left: 15px;
     }
 
-    .imgBanda img {
-    width: 95%;
 
-    }
 
     .textoBanda {
         grid-area: texto;
@@ -157,15 +155,13 @@ main {
         height: 100%;
         flex-direction: column;
         justify-content: baseline;
+        padding: 0 25px;
     }
 
     .textoBanda h2 {
         padding: 20px 0;
     }
 
-    .textoBanda p {
-        padding-right: 15px;
-    }
 
 
     .titulo {
@@ -298,8 +294,6 @@ main {
     .int5 {
         grid-area: int5;
     }
-
-    
 
 }
 
@@ -645,49 +639,33 @@ main {
 
 /*  ******************************* TOUR MAIN ******************************* */
 
-#tourMain {
-    margin-left: 20%;
-    margin-right: 20%;
-}
-
-#contenedorTour {
+.tourTablaBootstrap {
     border: solid 1px rgb(218, 218, 218);
-    width: 580px;
+    max-width: 580px;
     margin: auto;
     margin-bottom: 100px;
+    color: rgb(252, 148, 43) !important;
 }
 
-#divFechas {
-    display: inline-block;
-    width: 140px;
-    box-sizing: border-box;
-    padding-left: 20px;
+tbody tr {
+    height: 60px;
 }
 
-#divLugar {
-    display: inline-block;
-    width: 300px;
+tbody tr:hover {
+    background-color: rgb(252, 148, 43);
+    color: white;
 }
 
-#divButton {
-    display: inline-block;
-    width: 120px;
+tbody tr td {
+    padding-top: 20px !important;
 }
 
-#divButton button {
-    display: block;
-    padding: 0 30px;
-    margin: 30px 0;
-}
+tbody tr td button {
 
-.tourItems {
-    list-style-type: none;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 14px;
 }
-
-.tourItems li {
-    margin: 30px 0;
-}
-
 
 /*  ******************************* FIN TOUR ******************************* */
 
@@ -730,4 +708,25 @@ label, textarea, input {
 /*  ******************************* CONTACTO MAIN ******************************* */
 
 /*  ******************************* FOOTER ******************************* */
+
+
+footer {
+    height: 150px;
+    width: 100%;
+    background-color: rgb(61, 76, 43);
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+}
+
+footer i {
+    font-size: 30px ;
+}
+
+.textoFooter a:hover {
+    color: white;
+}
+
 
