@@ -69,12 +69,14 @@ nav a:hover {
 
 nav ul {
     height: 100%;
-    list-style-type: none;
     font-size: 18px;
     display: flex;
     align-items: center;
 }
 
+li {
+    list-style-type: none;
+}
 
 .tituloH2 {
     font-size: 24px;
@@ -120,7 +122,6 @@ main {
 }
 
 /******************************** INDEX DESKTOP **********************************/
-
 
 @media only screen and (min-width: 600px) {
 
@@ -233,7 +234,7 @@ main {
     .grilla {
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows: 200px 300px 50px 500px 500px 500px 500px 500px;
+        grid-template-rows: 240px 320px 50px 500px 500px 500px 500px 500px;
         grid-template-areas: "tituloBanda"
                              "imagenBanda"
                              "integrantes"
@@ -256,13 +257,19 @@ main {
 
     .imgBanda img {
         width: 95%;
-    
+        max-height: 316px;
+        max-width: 532px;
     }
 
+    .titulo h2 {
+        padding-top: 15px;
+    }
 
     .intImg { 
-        width: 40%;
+        
         padding-bottom: 15px;
+        max-height: 430px;
+        max-width: 264px;
     }
 
     .int1, .int2, .int3, .int4, .int5{
@@ -272,7 +279,8 @@ main {
     }
 
     div h3 {
-        padding-bottom: 15px;
+        padding-bottom: 5px;
+        margin: 0;
     }
 
     .int1 {
@@ -295,13 +303,18 @@ main {
         grid-area: int5;
     }
 
+    ul {
+        display: flex;
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        padding: 0 10px;
+    }
 }
 
-
 /***** FIN INDEX MOBILE  *****/
-
-
-
 
 /*  ******************************* DISCOGRAFIA DESKTOP ******************************* */
 
@@ -447,6 +460,7 @@ main {
 
     .discografiaGrilla h3 {
         margin-left: 10%;
+        font-size: 20px;
     }
 
 }
@@ -454,14 +468,14 @@ main {
 
 
 
-/*  ******************************* FIN DISCOGRAFIA DESKTOP ******************************* */
-/*  ******************************* DISCOGRAFIA MOBILE ******************************* */
+/*  ******************************* FIN DISCOGRAFIA DESKTOP *****************************/
+/*  ******************************* DISCOGRAFIA MOBILE******************************* */
 @media only screen and (max-width: 600px) {
 
     .discografiaGrilla {
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows: 50px 50px 800px 50px 800px 50px 800px 50px 800px 50px 800px 50px 800px 50px 800px 50px 800px 50px 800px 30px; 
+        grid-template-rows: 80px 50px 800px 50px 800px 50px 800px 50px 800px 50px 800px 50px 800px 50px 800px 50px 800px 50px 800px 30px; 
         grid-template-areas:"titulo0"
                             "titulo1"
                              "disco1"
@@ -481,14 +495,14 @@ main {
                              "disco8"
                              "titulo9"
                              "disco9"
-                             ".";
-                             
+                             ".";                   
 
     }
 
 
     .titulo0 {
         grid-area: titulo0;
+        font-size: 28px;
     }
 
     .titulo1 {
@@ -583,6 +597,7 @@ main {
         width: 390px;
         max-height: 390px;
         margin-bottom: 15px;
+        
     }
 
     .discografiaGrilla section {
@@ -590,6 +605,11 @@ main {
         flex-direction: column;
         align-items: center;
     }
+
+    .discografiaGrilla h3 {
+        font-size: 20px;
+    }
+
 
 }
 
@@ -599,43 +619,120 @@ main {
 
 
 
-/*  ************************************* VIDEOS MAIN ******************************* */
+/*  ************************************* VIDEOS DESKTOP ******************************* */
 
-.videosMain {
-    margin-left: 22%;
-    margin-right: 22%;
+@media only screen and (min-width: 600px) {
+
+    
+
+    .videosGrilla {
+        margin: 0 50px;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 70px 380px 380px 70px 380px;
+        grid-template-areas: "titulovid1 titulovid1"
+                            "infovid video1"
+                            "infovid2 video2"
+                            "titulovid2 titulovid2"
+                            "infovid3 video3";
+       }
+
+    .titulovid1 {
+        grid-area: titulovid1;
+    }
+
+    .infovid {
+        grid-area: infovid;
+        padding-left: 50%;
+    }
+
+    .video1 {
+        grid-area: video1;
+    }
+
+    .infovid2 {
+        grid-area: infovid2;
+        padding-left: 50%;
+    }
+
+    .video2 {
+        grid-area: video2;
+    }
+
+    .titulovid2 {
+        grid-area: titulovid2;
+    }
+
+    .infovid3 {
+        grid-area: infovid3;
+        padding-left: 50%;
+    }
+
+    .video3 {
+        grid-area: video3;
+    }
+
 }
 
-.contenedorVideo {
-    display: flex;
-    flex-direction: inline-block;
-    margin-bottom: 60px;
-}
-
-.infoVideo { 
-    height: 350px;
-    width: 200px;
-    overflow: auto;
-    padding-top: 80px;
-    box-sizing: border-box;
-}
-
-.video {
-    overflow: auto;
-    width: 600px;
-    height: 350px;
-    padding-left: 60px;
-    box-sizing: border-box;
-}
-
-
-.videosMain iframe {
-    width: 520px;
-    height: 340px;
-}
 
 /*  ******************************* FIN VIDEOS MAIN ******************************* */
+/*  ************************************* VIDEOS MOBILE ******************************* */
+@media only screen and (max-width: 600px) {
 
+    .videosGrilla {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 60px 60px 330px 60px 330px 45px 60px 330px;
+        grid-template-areas:  "titulovid1"
+                    "infovid" 
+                    "video1"
+                    "infovid2" 
+                    "video2"
+                    "titulovid2" 
+                    "infovid3" 
+                    "video3";
+
+    }
+    .titulovid1 {
+        grid-area: titulovid1;
+        padding-top: 20px;
+    }
+
+    .infovid {
+        grid-area: infovid;
+    }
+
+    .video1 {
+        grid-area: video1;
+    }
+
+    .infovid2 {
+        grid-area: infovid2;
+    }
+
+    .video2 {
+        grid-area: video2;
+    }
+
+    .titulovid2 {
+        grid-area: titulovid2;
+        padding: 0;
+    }
+
+    .infovid3 {
+        grid-area: infovid3;
+    }
+
+    .video3 {
+        grid-area: video3;
+    }
+
+    .videosGrilla div iframe {
+        width: 100%;
+    }
+}
+
+/*  ************************************* FIN VIDEOS MOBILE ******************************* */
 
 /*  ******************************* TOUR MAIN ******************************* */
 
@@ -670,45 +767,85 @@ tbody tr td button {
 /*  ******************************* FIN TOUR ******************************* */
 
 
-/*  ******************************* CONTACTO MAIN ******************************* */
+/*  ******************************* CONTACTO DESKTOP ******************************* */
 
-.contactoMain {
-    margin-left: 30%;
-    margin-right: 30%;
-    
+@media only screen and (min-width: 600px) {
+
+    .contactoMain {
+        margin-left: 35%;
+        margin-right: 35%;
+        
+    }
+
+    #formulario {
+        padding: 10px;
+        border: solid 1px rgb(218, 218, 218);
+        margin-bottom: 80px;
+        display: flex;
+        justify-content: center;
+    }
+
+
+    .contactoMain h2 {
+        text-align: center;
+    }
+
+    label, textarea, input {
+        display: block;
+        margin-bottom: 10px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #buttonFormulario {
+        width: 30%;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        margin-left: 116px;
+    }
+
+}
+/*  *******************************  FIN CONTACTO DESKTOP ******************************* */
+
+/*  *******************************  CONTACTO MOBILE ******************************* */
+@media only screen and (max-width: 600px) {
+    .contactoMain {
+        margin-left: 5%;
+        margin-right: 5%;
+        
+    }
+
+    #formulario {
+        padding: 10px;
+        border: solid 1px rgb(218, 218, 218);
+        margin-bottom: 80px;
+        display: flex;
+        justify-content: center;
+    }
+
+
+    .contactoMain h2 {
+        text-align: center;
+    }
+
+    label, textarea, input {
+        display: block;
+        margin-bottom: 10px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #buttonFormulario {
+        width: 30%;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        margin-left: 116px;
+    }
 }
 
-#formulario {
-    width: 350px;
-    margin: auto;
-    padding: 10px;
-    border: solid 1px rgb(218, 218, 218);
-    margin-bottom: 80px;
-}
-
-
-.contactoMain h2 {
-    text-align: center;
-}
-
-label, textarea, input {
-    display: block;
-    margin-bottom: 10px;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-#buttonFormulario {
-    width: 30%;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    margin-left: 116px;
-}
-
-/*  ******************************* CONTACTO MAIN ******************************* */
+/*  *******************************  FIN CONTACTO DESKTOP ******************************* */
 
 /*  ******************************* FOOTER ******************************* */
-
 
 footer {
     height: 150px;
