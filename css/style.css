@@ -1,869 +1,475 @@
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"); 
-
-* {
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    color: rgb(252, 148, 43);
-    font-family: 'Lora', serif;
-}
-
-
-nav {
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-.navbar-toggler {
-    color: rgba(252, 148, 43,0.5) !important;
-    margin-bottom: 10px;
-    background-color: rgba(252, 148, 43,0.3) !important;
-}
-
-.navbar-toggler:focus {
-    box-shadow: none;
-}
-
-.navbar-light .navbar-toggler {
-    border-color: rgba(252, 148, 43) !important;
-}
-
-.navbar-expand-md .navbar-collapse {
-        justify-content: center;  
-}
-
-nav div {
-    background-color: rgb(61, 76, 43);
-}
-
-nav div ul li a {
-    color: rgb(252, 148, 43) !important;
-    padding: 10px !important;
-    margin: 0 20px;
-    border-radius: 5px;
-}
-
-header h1 {
-    background-color: rgb(61, 76, 43);
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 40px;
-    margin: 0;
-}
-
-a {
-    text-decoration: none;
-    color: rgb(252, 148, 43);
-    padding: 10px;
-}
-
-nav a:hover {
-    text-decoration: none;
-    background-color: rgb(252, 148, 43);
-    color: white !important;
-}
-
-nav ul {
-    height: 100%;
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-}
-
-li {
-    list-style-type: none;
-}
-
-.tituloH2 {
-    font-size: 24px;
-    padding-bottom: 20px;
-    padding-top: 20px;
-    padding-bottom: 30px;
-    text-align: center;
-}
-
-
-
-/*************   ANIMACION ****************/
-
-@keyframes opacidad {
-     0% {
-         opacity: 0;
-     }
-
-     100% {
-         opacity: 1;
-     }
-}
-
-
-main {
-    animation-name: opacidad;
-    animation-duration: 1s;
-}
-
-#divFechas {
-    animation-name: opacidad;
-    animation-duration: 3s;
-}
-
-#divLugar {
-    animation-name: opacidad;
-    animation-duration: 5s;
-}
-
-#divButton {
-    animation-name: opacidad;
-    animation-duration: 7s;
-}
-
-/******************************** INDEX DESKTOP **********************************/
-
-@media only screen and (min-width: 600px) {
-
-
-
-  
-
-    .grilla {
-        display: grid;
-        grid-template-columns: 20% 20% 20% 20% 20%;
-        grid-template-rows: 400px 80px 540px;
-        grid-template-areas: "banda banda banda texto texto"
-                            "titulo titulo titulo titulo titulo"
-                            "int1 int2 int3 int4 int5";
-    
-    }
-
-
-    .imgBanda  {
-        grid-area: banda;
-        max-width: 650px;
-        justify-self: center;
-        align-self: center;
-        padding-left: 15px;
-    }
-
-
-
-    .textoBanda {
-        grid-area: texto;
-        display: flex;
-        height: 100%;
-        flex-direction: column;
-        justify-content: baseline;
-        padding: 0 25px;
-    }
-
-    .textoBanda h2 {
-        padding: 20px 0;
-    }
-
-
-
-    .titulo {
-        grid-area: titulo;
-        justify-self: center;
-        align-self: center;
-    }
-
-
-
-    .int1, .int2, .int3, .int4, .int5{
-        display: flex;
-        flex-direction: column; 
-        align-items: center;
-    }
-
-    div h3 {
-        padding-bottom: 15px;
-    }
-
-    div ul {
-        padding-bottom: 10px;
-    }
-
-    .intImg { 
-        width: 80%;
-        padding-bottom: 15px;
-    }
-
-    .int1 {
-        grid-area: int1;
-    }
-
-    .int2 {
-        grid-area: int2;
-    }
-
-    .int3 {
-        grid-area: int3;
-    }
-
-    .int4 {
-        grid-area: int4;
-    }
-
-    .int5 {
-        grid-area: int5;
-    }
-
-    .cardTransform:hover {
-        transform: scale(1.1, 1.1);
-        background-color: rgb(252, 148, 43);
-        color: white;
-        border: 3px solid rgb(226, 107, 37);
-        transition: all 0.5s;
-    }
-}
-
-/************************************** INDEX FIN DESKTOP  ************************************************/
-
-/**************************************     INDEX MOBILE  ************************************************/
-
-@media only screen and (max-width: 600px) {
-
-    main {
-        padding: 0 20px;
-    }
-
-    .grilla {
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: 240px 320px 50px 500px 500px 500px 500px 500px;
-        grid-template-areas: "tituloBanda"
-                             "imagenBanda"
-                             "integrantes"
-                             "int1"
-                             "int2"
-                             "int3"
-                             "int4"
-                             "int5";
-    }
-
-    .tituloBanda {
-        grid-area: tituloBanda;
-        padding-top: 15px;
-
-    }
-
-    .imgBanda {
-        grid-area: imagenBanda;
-    }
-
-    .imgBanda img {
-        width: 95%;
-        max-height: 316px;
-        max-width: 532px;
-    }
-
-    .titulo h2 {
-        padding-top: 15px;
-    }
-
-    .intImg { 
-        
-        padding-bottom: 15px;
-        max-height: 430px;
-        max-width: 264px;
-    }
-
-    .int1, .int2, .int3, .int4, .int5{
-        display: flex;
-        flex-direction: column; 
-        align-items: center;
-    }
-
-    div h3 {
-        padding-bottom: 5px;
-        margin: 0;
-    }
-
-    .int1 {
-        grid-area: int1;
-    }
-
-    .int2 {
-        grid-area: int2;
-    }
-
-    .int3 {
-        grid-area: int3;
-    }
-
-    .int4 {
-        grid-area: int4;
-    }
-
-    .int5 {
-        grid-area: int5;
-    }
-
-    ul {
-        display: flex;
-        margin: 0;
-        padding: 0;
-    }
-
-    li {
-        padding: 0 10px;
-    }
-}
-
-/***** FIN INDEX MOBILE  *****/
-
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+/*** colores ***/
 /*  ******************************* DISCOGRAFIA DESKTOP ******************************* */
-
 @media only screen and (min-width: 600px) {
-
-    
-
-    .discografiaGrilla {
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: 50px 50px 400px 50px 400px 50px 400px 50px 400px 50px 400px 50px 400px 50px 400px 50px 400px 50px 400px 30px; 
-        grid-template-areas:"titulo0"
-                            "titulo1"
-                             "disco1"
-                             "titulo2"
-                             "disco2"
-                             "titulo3"
-                             "disco3"
-                             "titulo4"
-                             "disco4"
-                             "titulo5"
-                             "disco5"
-                             "titulo6"
-                             "disco6"
-                             "titulo7"
-                             "disco7"
-                             "titulo8"
-                             "disco8"
-                             "titulo9"
-                             "disco9"
-                             ".";
-
-    }
-
-
-
-    .titulo0 {
-        grid-area: titulo0;
-    }
-
-    .titulo1 {
-        grid-area: titulo1;
-        display: flex;
-        align-content: center;
-    }
-
-    .disco1 {
-        grid-area: disco1;
-        display: flex;
-        justify-content: center;
-    }
-
-    .titulo2 {
-        grid-area: titulo2;
-    }
-
-    .disco2 {
-        grid-area: disco2;
-        display: flex;
-        justify-content: center;
-    }
-
-    .titulo3 {
-        grid-area: titulo3;
-    }
-
-    .disco3 {
-        grid-area: disco3;
-        display: flex;
-        justify-content: center;
-    }
-    
-    .titulo4 {
-        grid-area: titulo4;
-    }
-
-    .disco4 {
-        grid-area: disco4;
-        display: flex;
-        justify-content: center;
-    }
-
-    .titulo5 {
-        grid-area: titulo5;
-    }
-
-    .disco5 {
-        grid-area: disco5;
-        display: flex;
-        justify-content: center;
-    }
-
-    .titulo6 {
-        grid-area: titulo6;
-    }
-
-    .disco6 {
-        grid-area: disco6;
-        display: flex;
-        justify-content: center;
-    }
-
-    .titulo7 {
-        grid-area: titulo7;
-    }
-
-    .disco7 {
-        grid-area: disco7;
-        display: flex;
-        justify-content: center;
-    }
-
-    .titulo8 {
-        grid-area: titulo8;
-    }
-
-    .disco8 {
-        grid-area: disco8;
-        display: flex;
-        justify-content: center;
-    }
-
-    .titulo9 {
-        grid-area: titulo9;
-    }
-
-    .disco9 {
-        grid-area: disco9;
-        display: flex;
-        justify-content: center;
-    }
-
-
-    .discografiaGrilla section img {
-        width: 390px;
-        max-height: 390px;
-    }
-
-
-    .discos img {
-        margin-right: 40px;
-    }
-
+  .discografiaGrilla {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 50px 50px 400px 50px 400px 50px 400px 50px 400px 50px 400px 50px 400px 50px 400px 50px 400px 50px 400px 30px;
+    grid-template-areas: "titulo0" "titulo1" "disco1" "titulo2" "disco2" "titulo3" "disco3" "titulo4" "disco4" "titulo5" "disco5" "titulo6" "disco6" "titulo7" "disco7" "titulo8" "disco8" "titulo9" "disco9" "."; }
+    .discografiaGrilla .discos img {
+      width: 390px;
+      max-height: 390px;
+      margin-right: 40px; }
     .discografiaGrilla h3 {
-        margin-left: 10%;
-        font-size: 20px;
-    }
-
-}
-
-
-
+      margin-left: 10%;
+      font-size: 20px; }
+  .titulo0 {
+    grid-area: titulo0; }
+  .titulo1 {
+    grid-area: titulo1;
+    display: flex;
+    align-content: center; }
+  .disco1 {
+    grid-area: disco1;
+    display: flex;
+    justify-content: center; }
+  .titulo2 {
+    grid-area: titulo2; }
+  .disco2 {
+    grid-area: disco2;
+    display: flex;
+    justify-content: center; }
+  .titulo3 {
+    grid-area: titulo3; }
+  .disco3 {
+    grid-area: disco3;
+    display: flex;
+    justify-content: center; }
+  .titulo4 {
+    grid-area: titulo4; }
+  .disco4 {
+    grid-area: disco4;
+    display: flex;
+    justify-content: center; }
+  .titulo5 {
+    grid-area: titulo5; }
+  .disco5 {
+    grid-area: disco5;
+    display: flex;
+    justify-content: center; }
+  .titulo6 {
+    grid-area: titulo6; }
+  .disco6 {
+    grid-area: disco6;
+    display: flex;
+    justify-content: center; }
+  .titulo7 {
+    grid-area: titulo7; }
+  .disco7 {
+    grid-area: disco7;
+    display: flex;
+    justify-content: center; }
+  .titulo8 {
+    grid-area: titulo8; }
+  .disco8 {
+    grid-area: disco8;
+    display: flex;
+    justify-content: center; }
+  .titulo9 {
+    grid-area: titulo9; }
+  .disco9 {
+    grid-area: disco9;
+    display: flex;
+    justify-content: center; } }
 
 /*  ******************************* FIN DISCOGRAFIA DESKTOP *****************************/
 /*  ******************************* DISCOGRAFIA MOBILE******************************* */
 @media only screen and (max-width: 600px) {
-
-    .discografiaGrilla {
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: 80px 50px 800px 50px 800px 50px 800px 50px 800px 50px 800px 50px 800px 50px 800px 50px 800px 50px 800px 30px; 
-        grid-template-areas:"titulo0"
-                            "titulo1"
-                             "disco1"
-                             "titulo2"
-                             "disco2"
-                             "titulo3"
-                             "disco3"
-                             "titulo4"
-                             "disco4"
-                             "titulo5"
-                             "disco5"
-                             "titulo6"
-                             "disco6"
-                             "titulo7"
-                             "disco7"
-                             "titulo8"
-                             "disco8"
-                             "titulo9"
-                             "disco9"
-                             ".";                   
-
-    }
-
-
-    .titulo0 {
-        grid-area: titulo0;
-        font-size: 28px;
-    }
-
-    .titulo1 {
-        grid-area: titulo1;
-    }
-
-    .disco1 {
-        grid-area: disco1;
-
-    }
-
-    .titulo2 {
-        grid-area: titulo2;
-    }
-
-    .disco2 {
-        grid-area: disco2;
-
-    }
-
-    .titulo3 {
-        grid-area: titulo3;
-    }
-
-    .disco3 {
-        grid-area: disco3;
-
-    }
-    
-    .titulo4 {
-        grid-area: titulo4;
-    }
-
-    .disco4 {
-        grid-area: disco4;
-        display: block;
-        justify-content: center;
-    }
-
-    .titulo5 {
-        grid-area: titulo5;
-    }
-
-    .disco5 {
-        grid-area: disco5;
-        display: block;
-        justify-content: center;
-    }
-
-    .titulo6 {
-        grid-area: titulo6;
-    }
-
-    .disco6 {
-        grid-area: disco6;
-        display: block;
-        justify-content: center;
-    }
-
-    .titulo7 {
-        grid-area: titulo7;
-    }
-
-    .disco7 {
-        grid-area: disco7;
-        display: block;
-        justify-content: center;
-    }
-
-    .titulo8 {
-        grid-area: titulo8;
-    }
-
-    .disco8 {
-        grid-area: disco8;
-        display: block;
-        justify-content: center;
-    }
-
-    .titulo9 {
-        grid-area: titulo9;
-    }
-
-    .disco9 {
-        grid-area: disco9;
-        display: block;
-        justify-content: center;
-    }
-
-
-    .discografiaGrilla section img {
-        width: 390px;
-        max-height: 390px;
-        margin-bottom: 15px;
-        
-    }
-
+  .discografiaGrilla {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 80px 50px 800px 50px 800px 50px 800px 50px 800px 50px 800px 50px 800px 50px 800px 50px 800px 50px 800px 30px;
+    grid-template-areas: "titulo0" "titulo1" "disco1" "titulo2" "disco2" "titulo3" "disco3" "titulo4" "disco4" "titulo5" "disco5" "titulo6" "disco6" "titulo7" "disco7" "titulo8" "disco8" "titulo9" "disco9" "."; }
+    .discografiaGrilla .discos img {
+      width: 390px;
+      max-height: 390px;
+      margin-bottom: 15px; }
     .discografiaGrilla section {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
     .discografiaGrilla h3 {
-        font-size: 20px;
-    }
-
-
-}
-
-
+      font-size: 20px; }
+  .titulo0 {
+    grid-area: titulo0;
+    font-size: 28px; }
+  .titulo1 {
+    grid-area: titulo1; }
+  .disco1 {
+    grid-area: disco1; }
+  .titulo2 {
+    grid-area: titulo2; }
+  .disco2 {
+    grid-area: disco2; }
+  .titulo3 {
+    grid-area: titulo3; }
+  .disco3 {
+    grid-area: disco3; }
+  .titulo4 {
+    grid-area: titulo4; }
+  .disco4 {
+    grid-area: disco4;
+    display: block;
+    justify-content: center; }
+  .titulo5 {
+    grid-area: titulo5; }
+  .disco5 {
+    grid-area: disco5;
+    display: block;
+    justify-content: center; }
+  .titulo6 {
+    grid-area: titulo6; }
+  .disco6 {
+    grid-area: disco6;
+    display: block;
+    justify-content: center; }
+  .titulo7 {
+    grid-area: titulo7; }
+  .disco7 {
+    grid-area: disco7;
+    display: block;
+    justify-content: center; }
+  .titulo8 {
+    grid-area: titulo8; }
+  .disco8 {
+    grid-area: disco8;
+    display: block;
+    justify-content: center; }
+  .titulo9 {
+    grid-area: titulo9; }
+  .disco9 {
+    grid-area: disco9;
+    display: block;
+    justify-content: center; } }
 
 /*  ******************************* FIN DISCOGRAFIA MOBILE ******************************* */
-
-
-
 /*  ************************************* VIDEOS DESKTOP ******************************* */
-
 @media only screen and (min-width: 600px) {
-
-    
-
-    .videosGrilla {
-        margin: 0 50px;
-        display: grid;
-        grid-template-columns: 50% 50%;
-        grid-template-rows: 70px 380px 380px 70px 380px;
-        grid-template-areas: "titulovid1 titulovid1"
-                            "infovid video1"
-                            "infovid2 video2"
-                            "titulovid2 titulovid2"
-                            "infovid3 video3";
-       }
-
-    .titulovid1 {
-        grid-area: titulovid1;
-    }
-
-    .infovid {
-        grid-area: infovid;
-        padding-left: 50%;
-    }
-
-    .video1 {
-        grid-area: video1;
-    }
-
-    .infovid2 {
-        grid-area: infovid2;
-        padding-left: 50%;
-    }
-
-    .video2 {
-        grid-area: video2;
-    }
-
-    .titulovid2 {
-        grid-area: titulovid2;
-    }
-
-    .infovid3 {
-        grid-area: infovid3;
-        padding-left: 50%;
-    }
-
-    .video3 {
-        grid-area: video3;
-    }
-
-}
-
+  .videosGrilla {
+    margin: 0 50px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 70px 380px 380px 70px 380px;
+    grid-template-areas: "titulovid1 titulovid1" "infovid video1" "infovid2 video2" "titulovid2 titulovid2" "infovid3 video3"; }
+  .titulovid1 {
+    grid-area: titulovid1; }
+  .infovid {
+    grid-area: infovid;
+    padding-left: 50%; }
+  .video1 {
+    grid-area: video1; }
+  .infovid2 {
+    grid-area: infovid2;
+    padding-left: 50%; }
+  .video2 {
+    grid-area: video2; }
+  .titulovid2 {
+    grid-area: titulovid2; }
+  .infovid3 {
+    grid-area: infovid3;
+    padding-left: 50%; }
+  .video3 {
+    grid-area: video3; } }
 
 /*  ******************************* FIN VIDEOS MAIN ******************************* */
 /*  ************************************* VIDEOS MOBILE ******************************* */
 @media only screen and (max-width: 600px) {
-
-    .videosGrilla {
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: 60px 60px 330px 60px 330px 45px 60px 330px;
-        grid-template-areas:  "titulovid1"
-                    "infovid" 
-                    "video1"
-                    "infovid2" 
-                    "video2"
-                    "titulovid2" 
-                    "infovid3" 
-                    "video3";
-
-    }
-    .titulovid1 {
-        grid-area: titulovid1;
-        padding-top: 20px;
-    }
-
-    .infovid {
-        grid-area: infovid;
-    }
-
-    .video1 {
-        grid-area: video1;
-    }
-
-    .infovid2 {
-        grid-area: infovid2;
-    }
-
-    .video2 {
-        grid-area: video2;
-    }
-
-    .titulovid2 {
-        grid-area: titulovid2;
-        padding: 0;
-    }
-
-    .infovid3 {
-        grid-area: infovid3;
-    }
-
-    .video3 {
-        grid-area: video3;
-    }
-
-    .videosGrilla div iframe {
-        width: 100%;
-    }
-}
+  .videosGrilla {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 60px 60px 330px 60px 330px 45px 60px 330px;
+    grid-template-areas: "titulovid1" "infovid"  "video1" "infovid2"  "video2" "titulovid2"  "infovid3"  "video3"; }
+    .videosGrilla iframe {
+      width: 100%; }
+  .titulovid1 {
+    grid-area: titulovid1;
+    padding-top: 20px; }
+  .infovid {
+    grid-area: infovid; }
+  .video1 {
+    grid-area: video1; }
+  .infovid2 {
+    grid-area: infovid2; }
+  .video2 {
+    grid-area: video2; }
+  .titulovid2 {
+    grid-area: titulovid2;
+    padding: 0; }
+  .infovid3 {
+    grid-area: infovid3; }
+  .video3 {
+    grid-area: video3; } }
 
 /*  ************************************* FIN VIDEOS MOBILE ******************************* */
-
 /*  ******************************* TOUR MAIN ******************************* */
-
 .tourTablaBootstrap {
-    border: solid 1px rgb(218, 218, 218);
-    max-width: 580px;
-    margin: auto;
-    margin-bottom: 100px;
-    color: rgb(252, 148, 43) !important;
-}
-
-tbody tr {
-    height: 60px;
-}
-
-tbody tr:hover {
-    background-color: rgb(252, 148, 43);
-    color: white;
-}
-
-tbody tr td {
-    padding-top: 20px !important;
-}
-
-tbody tr td button {
-
+  border: solid 1px #dadada;
+  max-width: 580px;
+  margin: auto;
+  margin-bottom: 100px;
+  color: #fc942b !important; }
+  .tourTablaBootstrap tr:hover {
+    background-color: #fc942b;
+    color: white; }
+  .tourTablaBootstrap td {
+    padding-top: 20px !important; }
+  .tourTablaBootstrap button {
     padding: 5px;
     border-radius: 10px;
-    font-size: 14px;
-}
+    font-size: 14px; }
 
 /*  ******************************* FIN TOUR ******************************* */
-
-
-/*  ******************************* CONTACTO DESKTOP ******************************* */
-
+/******************************** CONTACTO DESKTOP ******************************* */
 @media only screen and (min-width: 600px) {
+  .contactoMain {
+    margin-left: 35%;
+    margin-right: 35%; }
+    .contactoMain #formulario {
+      padding: 10px;
+      border: solid 1px #dadada;
+      margin-bottom: 80px;
+      display: flex;
+      justify-content: center; }
+    .contactoMain label, .contactoMain textarea, .contactoMain input {
+      display: block;
+      margin-bottom: 10px;
+      width: 100%;
+      box-sizing: border-box; }
+    .contactoMain button {
+      width: 30%;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      margin-left: 116px; } }
 
-    .contactoMain {
-        margin-left: 35%;
-        margin-right: 35%;
-        
-    }
-
-    #formulario {
-        padding: 10px;
-        border: solid 1px rgb(218, 218, 218);
-        margin-bottom: 80px;
-        display: flex;
-        justify-content: center;
-    }
-
-
-    .contactoMain h2 {
-        text-align: center;
-    }
-
-    label, textarea, input {
-        display: block;
-        margin-bottom: 10px;
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-    #buttonFormulario {
-        width: 30%;
-        margin-top: 10px;
-        margin-bottom: 20px;
-        margin-left: 116px;
-    }
-
-}
 /*  *******************************  FIN CONTACTO DESKTOP ******************************* */
-
 /*  *******************************  CONTACTO MOBILE ******************************* */
 @media only screen and (max-width: 600px) {
-    .contactoMain {
-        margin-left: 5%;
-        margin-right: 5%;
-        
-    }
+  .contactoMain {
+    margin-left: 5%;
+    margin-right: 5%; }
+    .contactoMain #formulario {
+      padding: 10px;
+      border: solid 1px #dadada;
+      margin-bottom: 80px;
+      display: flex;
+      justify-content: center; }
+    .contactoMain label, .contactoMain textarea, .contactoMain input {
+      display: block;
+      margin-bottom: 10px;
+      width: 100%;
+      box-sizing: border-box; }
+    .contactoMain button {
+      width: 30%;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      margin-left: 116px; } }
 
-    #formulario {
-        padding: 10px;
-        border: solid 1px rgb(218, 218, 218);
-        margin-bottom: 80px;
-        display: flex;
-        justify-content: center;
-    }
+/*  *******************************  FIN CONTACTO MOBILE ******************************* */
+* {
+  margin: 0;
+  padding: 0; }
 
+body {
+  color: #fc942b;
+  font-family: 'Lora', serif; }
 
-    .contactoMain h2 {
-        text-align: center;
-    }
-
-    label, textarea, input {
-        display: block;
-        margin-bottom: 10px;
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-    #buttonFormulario {
-        width: 30%;
-        margin-top: 10px;
-        margin-bottom: 20px;
-        margin-left: 116px;
-    }
-}
-
-/*  *******************************  FIN CONTACTO DESKTOP ******************************* */
-
-/*  ******************************* FOOTER ******************************* */
-
-footer {
-    height: 150px;
-    width: 100%;
-    background-color: rgb(61, 76, 43);
+nav {
+  margin: 0 !important;
+  padding: 0 !important; }
+  nav div {
+    background-color: #3d4c2b; }
+  nav a {
+    color: #fc942b !important;
+    padding: 10px !important;
+    margin: 0 20px;
+    border-radius: 5px; }
+  nav a:hover {
+    text-decoration: none;
+    background-color: #fc942b;
+    color: white !important; }
+  nav ul {
+    height: 100%;
+    font-size: 18px;
     display: flex;
-    margin-top: 20px;
-    align-items: center;
-    justify-content: center;
-    font-size: 25px;
-}
+    align-items: center; }
 
-footer i {
-    font-size: 30px ;
-}
+.navbar-toggler {
+  color: rgba(252, 148, 43, 0.5) !important;
+  margin-bottom: 10px;
+  background-color: rgba(252, 148, 43, 0.3) !important; }
 
-.textoFooter a:hover {
+.navbar-toggler:focus {
+  box-shadow: none; }
+
+.navbar-light .navbar-toggler {
+  border-color: #fc942b !important; }
+
+.navbar-expand-md .navbar-collapse {
+  justify-content: center; }
+
+header h1 {
+  background-color: #3d4c2b;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  margin: 0; }
+
+a {
+  text-decoration: none;
+  color: #fc942b;
+  padding: 10px; }
+
+li {
+  list-style-type: none; }
+
+.tituloH2 {
+  font-size: 24px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  text-align: center; }
+
+/*************   ANIMACION ****************/
+@keyframes opacidad {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+main {
+  animation-name: opacidad;
+  animation-duration: 1s; }
+
+#divFechas {
+  animation-name: opacidad;
+  animation-duration: 3s; }
+
+#divLugar {
+  animation-name: opacidad;
+  animation-duration: 5s; }
+
+#divButton {
+  animation-name: opacidad;
+  animation-duration: 7s; }
+
+/******************************** INDEX DESKTOP **********************************/
+@media only screen and (min-width: 600px) {
+  .grilla {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 400px 80px 540px;
+    grid-template-areas: "banda banda banda texto texto" "titulo titulo titulo titulo titulo" "int1 int2 int3 int4 int5"; }
+  .imgBanda {
+    grid-area: banda;
+    max-width: 650px;
+    justify-self: center;
+    align-self: center;
+    padding-left: 15px; }
+  .textoBanda {
+    grid-area: texto;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: baseline;
+    padding: 0 25px; }
+  .textoBanda h2 {
+    padding: 20px 0; }
+  .titulo {
+    grid-area: titulo;
+    justify-self: center;
+    align-self: center; }
+  .int1, .int2, .int3, .int4, .int5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  div h3 {
+    padding-bottom: 15px; }
+  div ul {
+    padding-bottom: 10px; }
+  .intImg {
+    width: 80%;
+    padding-bottom: 15px; }
+  .int1 {
+    grid-area: int1; }
+  .int2 {
+    grid-area: int2; }
+  .int3 {
+    grid-area: int3; }
+  .int4 {
+    grid-area: int4; }
+  .int5 {
+    grid-area: int5; }
+  .cardTransform:hover {
+    transform: scale(1.1, 1.1);
+    background-color: #fc942b;
     color: white;
-}
+    border: 3px solid #e26b25;
+    transition: all 0.5s; } }
 
+/************************************** INDEX FIN DESKTOP  ************************************************/
+/**************************************     INDEX MOBILE  ************************************************/
+@media only screen and (max-width: 600px) {
+  main {
+    padding: 0 20px; }
+  .grilla {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 240px 320px 50px 500px 500px 500px 500px 500px;
+    grid-template-areas: "tituloBanda" "imagenBanda" "integrantes" "int1" "int2" "int3" "int4" "int5"; }
+  .tituloBanda {
+    grid-area: tituloBanda;
+    padding-top: 15px; }
+  .imgBanda {
+    grid-area: imagenBanda; }
+  .imgBanda img {
+    width: 95%;
+    max-height: 316px;
+    max-width: 532px; }
+  .titulo h2 {
+    padding-top: 15px; }
+  .intImg {
+    padding-bottom: 15px;
+    max-height: 430px;
+    max-width: 264px; }
+  .int1, .int2, .int3, .int4, .int5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  div h3 {
+    padding-bottom: 5px;
+    margin: 0; }
+  .int1 {
+    grid-area: int1; }
+  .int2 {
+    grid-area: int2; }
+  .int3 {
+    grid-area: int3; }
+  .int4 {
+    grid-area: int4; }
+  .int5 {
+    grid-area: int5; }
+  ul {
+    display: flex;
+    margin: 0;
+    padding: 0; }
+  li {
+    padding: 0 10px; } }
 
+/***** FIN INDEX MOBILE  *****/
+/*  ******************************* FOOTER ******************************* */
+.footer {
+  height: 150px;
+  width: 100%;
+  background-color: #3d4c2b;
+  display: flex;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px; }
+  .footer i {
+    font-size: 30px; }
+  .footer a:hover {
+    color: white; }

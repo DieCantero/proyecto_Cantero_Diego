@@ -1,0 +1,344 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"); 
+
+@import './variables.scss';
+@import './discografia.scss';
+@import './videos';
+@import './tour';
+@import './contacto';
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: $colorTexto-ColorHover;
+    font-family: 'Lora', serif;
+}
+
+
+nav {
+    margin: 0 !important;
+    padding: 0 !important;
+
+    & div {
+        background-color: $colorFondos;
+    }
+
+    & a {
+        color: $colorTexto-ColorHover !important;
+        padding: 10px !important;
+        margin: 0 20px;
+        border-radius: 5px;
+    }
+
+    & a:hover {
+        text-decoration: none;
+        background-color: $colorTexto-ColorHover;
+        color: white !important;
+    }
+
+    & ul {
+        height: 100%;
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.navbar-toggler {
+    color: rgba(252, 148, 43,0.5) !important;
+    margin-bottom: 10px;
+    background-color: rgba(252, 148, 43,0.3) !important;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar-light .navbar-toggler {
+    border-color: $colorTexto-ColorHover !important;
+}
+
+.navbar-expand-md .navbar-collapse {
+        justify-content: center;  
+}
+
+header h1 {
+    background-color: $colorFondos;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: $colorTexto-ColorHover;
+    padding: 10px;
+}
+
+li {
+    list-style-type: none;
+}
+
+.tituloH2 {
+    font-size: 24px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+
+/*************   ANIMACION ****************/
+
+@keyframes opacidad {
+     0% {
+         opacity: 0;
+     }
+
+     100% {
+         opacity: 1;
+     }
+}
+
+
+main {
+    animation-name: opacidad;
+    animation-duration: 1s;
+}
+
+#divFechas {
+    animation-name: opacidad;
+    animation-duration: 3s;
+}
+
+#divLugar {
+    animation-name: opacidad;
+    animation-duration: 5s;
+}
+
+#divButton {
+    animation-name: opacidad;
+    animation-duration: 7s;
+}
+
+/******************************** INDEX DESKTOP **********************************/
+
+@media only screen and (min-width: 600px) {
+
+
+
+  
+
+    .grilla {
+        display: grid;
+        grid-template-columns: 20% 20% 20% 20% 20%;
+        grid-template-rows: 400px 80px 540px;
+        grid-template-areas: "banda banda banda texto texto"
+                            "titulo titulo titulo titulo titulo"
+                            "int1 int2 int3 int4 int5";
+    
+    }
+
+
+    .imgBanda  {
+        grid-area: banda;
+        max-width: 650px;
+        justify-self: center;
+        align-self: center;
+        padding-left: 15px;
+    }
+
+
+
+    .textoBanda {
+        grid-area: texto;
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        justify-content: baseline;
+        padding: 0 25px;
+    }
+
+    .textoBanda h2 {
+        padding: 20px 0;
+    }
+
+
+
+    .titulo {
+        grid-area: titulo;
+        justify-self: center;
+        align-self: center;
+    }
+
+
+
+    .int1, .int2, .int3, .int4, .int5{
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    div h3 {
+        padding-bottom: 15px;
+    }
+
+    div ul {
+        padding-bottom: 10px;
+    }
+
+    .intImg { 
+        width: 80%;
+        padding-bottom: 15px;
+    }
+
+    .int1 {
+        grid-area: int1;
+    }
+
+    .int2 {
+        grid-area: int2;
+    }
+
+    .int3 {
+        grid-area: int3;
+    }
+
+    .int4 {
+        grid-area: int4;
+    }
+
+    .int5 {
+        grid-area: int5;
+    }
+
+    .cardTransform:hover {
+        transform: scale(1.1, 1.1);
+        background-color: $colorTexto-ColorHover;
+        color: white;
+        border: 3px solid rgb(226, 107, 37);
+        transition: all 0.5s;
+    }
+}
+
+/************************************** INDEX FIN DESKTOP  ************************************************/
+
+/**************************************     INDEX MOBILE  ************************************************/
+
+@media only screen and (max-width: 600px) {
+
+    main {
+        padding: 0 20px;
+    }
+
+    .grilla {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 240px 320px 50px 500px 500px 500px 500px 500px;
+        grid-template-areas: "tituloBanda"
+                             "imagenBanda"
+                             "integrantes"
+                             "int1"
+                             "int2"
+                             "int3"
+                             "int4"
+                             "int5";
+    }
+
+    .tituloBanda {
+        grid-area: tituloBanda;
+        padding-top: 15px;
+
+    }
+
+    .imgBanda {
+        grid-area: imagenBanda;
+    }
+
+    .imgBanda img {
+        width: 95%;
+        max-height: 316px;
+        max-width: 532px;
+    }
+
+    .titulo h2 {
+        padding-top: 15px;
+    }
+
+    .intImg { 
+        
+        padding-bottom: 15px;
+        max-height: 430px;
+        max-width: 264px;
+    }
+
+    .int1, .int2, .int3, .int4, .int5{
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    div h3 {
+        padding-bottom: 5px;
+        margin: 0;
+    }
+
+    .int1 {
+        grid-area: int1;
+    }
+
+    .int2 {
+        grid-area: int2;
+    }
+
+    .int3 {
+        grid-area: int3;
+    }
+
+    .int4 {
+        grid-area: int4;
+    }
+
+    .int5 {
+        grid-area: int5;
+    }
+
+    ul {
+        display: flex;
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        padding: 0 10px;
+    }
+}
+
+/***** FIN INDEX MOBILE  *****/
+
+/*  ******************************* FOOTER ******************************* */
+
+.footer {
+    height: 150px;
+    width: 100%;
+    background-color: $colorFondos;
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+
+    & i {
+        font-size: 30px ;
+    }
+    
+    & a:hover {
+        color: white;
+    }
+    
+}

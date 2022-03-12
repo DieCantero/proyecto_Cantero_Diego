@@ -1,0 +1,115 @@
+/*  ************************************* VIDEOS DESKTOP ******************************* */
+
+@media only screen and (min-width: 600px) {
+
+    
+
+    .videosGrilla {
+        margin: 0 50px;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 70px 380px 380px 70px 380px;
+        grid-template-areas: "titulovid1 titulovid1"
+                            "infovid video1"
+                            "infovid2 video2"
+                            "titulovid2 titulovid2"
+                            "infovid3 video3";
+       }
+
+    .titulovid1 {
+        grid-area: titulovid1;
+    }
+
+    .infovid {
+        grid-area: infovid;
+        padding-left: 50%;
+    }
+
+    .video1 {
+        grid-area: video1;
+    }
+
+    .infovid2 {
+        grid-area: infovid2;
+        padding-left: 50%;
+    }
+
+    .video2 {
+        grid-area: video2;
+    }
+
+    .titulovid2 {
+        grid-area: titulovid2;
+    }
+
+    .infovid3 {
+        grid-area: infovid3;
+        padding-left: 50%;
+    }
+
+    .video3 {
+        grid-area: video3;
+    }
+
+}
+
+
+/*  ******************************* FIN VIDEOS MAIN ******************************* */
+/*  ************************************* VIDEOS MOBILE ******************************* */
+@media only screen and (max-width: 600px) {
+
+    .videosGrilla {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 60px 60px 330px 60px 330px 45px 60px 330px;
+        grid-template-areas:  "titulovid1"
+                    "infovid" 
+                    "video1"
+                    "infovid2" 
+                    "video2"
+                    "titulovid2" 
+                    "infovid3" 
+                    "video3";
+
+        & iframe {
+            width: 100%;
+        }
+
+    }
+    .titulovid1 {
+        grid-area: titulovid1;
+        padding-top: 20px;
+    }
+
+    .infovid {
+        grid-area: infovid;
+    }
+
+    .video1 {
+        grid-area: video1;
+    }
+
+    .infovid2 {
+        grid-area: infovid2;
+    }
+
+    .video2 {
+        grid-area: video2;
+    }
+
+    .titulovid2 {
+        grid-area: titulovid2;
+        padding: 0;
+    }
+
+    .infovid3 {
+        grid-area: infovid3;
+    }
+
+    .video3 {
+        grid-area: video3;
+    }
+
+}
+
+/*  ************************************* FIN VIDEOS MOBILE ******************************* */

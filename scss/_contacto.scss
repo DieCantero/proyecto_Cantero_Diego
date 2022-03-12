@@ -1,0 +1,68 @@
+/******************************** CONTACTO DESKTOP ******************************* */
+
+@media only screen and (min-width: 600px) {
+
+    .contactoMain {
+        margin-left: 35%;
+        margin-right: 35%;
+   
+        & #formulario {
+            padding: 10px;
+            border: solid 1px rgb(218, 218, 218);
+            margin-bottom: 80px;
+            display: flex;
+            justify-content: center;
+        }
+
+        & label, textarea, input {
+            display: block;
+            margin-bottom: 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        & button {
+            width: 30%;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            margin-left: 116px;
+        }
+    }
+
+}
+/*  *******************************  FIN CONTACTO DESKTOP ******************************* */
+
+/*  *******************************  CONTACTO MOBILE ******************************* */
+
+@media only screen and (max-width: 600px) {
+    .contactoMain {
+        margin-left: 5%;
+        margin-right: 5%;
+
+
+        & #formulario {
+            padding: 10px;
+            border: solid 1px rgb(218, 218, 218);
+            margin-bottom: 80px;
+            display: flex;
+            justify-content: center;
+        }
+        
+        &  label, textarea, input {
+            display: block;
+            margin-bottom: 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        & button {
+            width: 30%;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            margin-left: 116px;
+        } 
+    }
+
+}
+
+/*  *******************************  FIN CONTACTO MOBILE ******************************* */
