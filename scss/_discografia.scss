@@ -54,10 +54,14 @@
         align-content: center;
     }
 
-    .disco1 {
-        grid-area: disco1;
+    .discosDisplay {
         display: flex;
         justify-content: center;
+    }
+
+    .disco1 {
+        grid-area: disco1;
+        @extend .discosDisplay;
     }
 
     .titulo2 {
@@ -66,8 +70,7 @@
 
     .disco2 {
         grid-area: disco2;
-        display: flex;
-        justify-content: center;
+        @extend .discosDisplay;
     }
 
     .titulo3 {
@@ -76,8 +79,7 @@
 
     .disco3 {
         grid-area: disco3;
-        display: flex;
-        justify-content: center;
+        @extend .discosDisplay;
     }
     
     .titulo4 {
@@ -86,8 +88,7 @@
 
     .disco4 {
         grid-area: disco4;
-        display: flex;
-        justify-content: center;
+        @extend .discosDisplay;
     }
 
     .titulo5 {
@@ -96,8 +97,7 @@
 
     .disco5 {
         grid-area: disco5;
-        display: flex;
-        justify-content: center;
+        @extend .discosDisplay;
     }
 
     .titulo6 {
@@ -106,8 +106,7 @@
 
     .disco6 {
         grid-area: disco6;
-        display: flex;
-        justify-content: center;
+        @extend .discosDisplay;
     }
 
     .titulo7 {
@@ -116,8 +115,7 @@
 
     .disco7 {
         grid-area: disco7;
-        display: flex;
-        justify-content: center;
+        @extend .discosDisplay;
     }
 
     .titulo8 {
@@ -126,8 +124,7 @@
 
     .disco8 {
         grid-area: disco8;
-        display: flex;
-        justify-content: center;
+        @extend .discosDisplay;
     }
 
     .titulo9 {
@@ -136,8 +133,7 @@
 
     .disco9 {
         grid-area: disco9;
-        display: flex;
-        justify-content: center;
+        @extend .discosDisplay;
     }
 
 }
@@ -230,8 +226,6 @@
 
     .disco4 {
         grid-area: disco4;
-        display: block;
-        justify-content: center;
     }
 
     .titulo5 {
@@ -240,8 +234,6 @@
 
     .disco5 {
         grid-area: disco5;
-        display: block;
-        justify-content: center;
     }
 
     .titulo6 {
@@ -250,8 +242,6 @@
 
     .disco6 {
         grid-area: disco6;
-        display: block;
-        justify-content: center;
     }
 
     .titulo7 {
@@ -260,8 +250,6 @@
 
     .disco7 {
         grid-area: disco7;
-        display: block;
-        justify-content: center;
     }
 
     .titulo8 {
@@ -270,8 +258,6 @@
 
     .disco8 {
         grid-area: disco8;
-        display: block;
-        justify-content: center;
     }
 
     .titulo9 {
@@ -280,8 +266,6 @@
 
     .disco9 {
         grid-area: disco9;
-        display: block;
-        justify-content: center;
     }
 
 

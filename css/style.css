@@ -20,58 +20,43 @@
     grid-area: titulo1;
     display: flex;
     align-content: center; }
-  .disco1 {
-    grid-area: disco1;
+  .discosDisplay, .disco1, .disco2, .disco3, .disco4, .disco5, .disco6, .disco7, .disco8, .disco9 {
     display: flex;
     justify-content: center; }
+  .disco1 {
+    grid-area: disco1; }
   .titulo2 {
     grid-area: titulo2; }
   .disco2 {
-    grid-area: disco2;
-    display: flex;
-    justify-content: center; }
+    grid-area: disco2; }
   .titulo3 {
     grid-area: titulo3; }
   .disco3 {
-    grid-area: disco3;
-    display: flex;
-    justify-content: center; }
+    grid-area: disco3; }
   .titulo4 {
     grid-area: titulo4; }
   .disco4 {
-    grid-area: disco4;
-    display: flex;
-    justify-content: center; }
+    grid-area: disco4; }
   .titulo5 {
     grid-area: titulo5; }
   .disco5 {
-    grid-area: disco5;
-    display: flex;
-    justify-content: center; }
+    grid-area: disco5; }
   .titulo6 {
     grid-area: titulo6; }
   .disco6 {
-    grid-area: disco6;
-    display: flex;
-    justify-content: center; }
+    grid-area: disco6; }
   .titulo7 {
     grid-area: titulo7; }
   .disco7 {
-    grid-area: disco7;
-    display: flex;
-    justify-content: center; }
+    grid-area: disco7; }
   .titulo8 {
     grid-area: titulo8; }
   .disco8 {
-    grid-area: disco8;
-    display: flex;
-    justify-content: center; }
+    grid-area: disco8; }
   .titulo9 {
     grid-area: titulo9; }
   .disco9 {
-    grid-area: disco9;
-    display: flex;
-    justify-content: center; } }
+    grid-area: disco9; } }
 
 /*  ******************************* FIN DISCOGRAFIA DESKTOP *****************************/
 /*  ******************************* DISCOGRAFIA MOBILE******************************* */
@@ -109,39 +94,27 @@
   .titulo4 {
     grid-area: titulo4; }
   .disco4 {
-    grid-area: disco4;
-    display: block;
-    justify-content: center; }
+    grid-area: disco4; }
   .titulo5 {
     grid-area: titulo5; }
   .disco5 {
-    grid-area: disco5;
-    display: block;
-    justify-content: center; }
+    grid-area: disco5; }
   .titulo6 {
     grid-area: titulo6; }
   .disco6 {
-    grid-area: disco6;
-    display: block;
-    justify-content: center; }
+    grid-area: disco6; }
   .titulo7 {
     grid-area: titulo7; }
   .disco7 {
-    grid-area: disco7;
-    display: block;
-    justify-content: center; }
+    grid-area: disco7; }
   .titulo8 {
     grid-area: titulo8; }
   .disco8 {
-    grid-area: disco8;
-    display: block;
-    justify-content: center; }
+    grid-area: disco8; }
   .titulo9 {
     grid-area: titulo9; }
   .disco9 {
-    grid-area: disco9;
-    display: block;
-    justify-content: center; } }
+    grid-area: disco9; } }
 
 /*  ******************************* FIN DISCOGRAFIA MOBILE ******************************* */
 /*  ************************************* VIDEOS DESKTOP ******************************* */
@@ -203,21 +176,41 @@
 
 /*  ************************************* FIN VIDEOS MOBILE ******************************* */
 /*  ******************************* TOUR MAIN ******************************* */
-.tourTablaBootstrap {
-  border: solid 1px #dadada;
-  max-width: 580px;
-  margin: auto;
-  margin-bottom: 100px;
-  color: #fc942b !important; }
-  .tourTablaBootstrap tr:hover {
-    background-color: #fc942b;
-    color: white; }
-  .tourTablaBootstrap td {
-    padding-top: 20px !important; }
-  .tourTablaBootstrap button {
-    padding: 5px;
-    border-radius: 10px;
-    font-size: 14px; }
+/*desktop*/
+@media only screen and (min-width: 600px) {
+  .tourTablaBootstrap {
+    border: solid 1px #dadada;
+    max-width: 580px;
+    margin: auto;
+    margin-bottom: 100px;
+    color: #fc942b !important; }
+    .tourTablaBootstrap tr:hover {
+      color: white;
+      background-color: #fc942b; }
+    .tourTablaBootstrap td {
+      padding-top: 20px !important; }
+    .tourTablaBootstrap button {
+      padding: 5px;
+      border-radius: 10px;
+      font-size: 14px; } }
+
+/*mobile*/
+@media only screen and (max-width: 600px) {
+  .tourTablaBootstrap {
+    border: solid 1px #dadada;
+    max-width: 580px;
+    margin: auto;
+    margin-bottom: 100px;
+    color: #fc942b !important; }
+    .tourTablaBootstrap tr:hover {
+      color: #fc942b;
+      background-color: #3d4c2b; }
+    .tourTablaBootstrap td {
+      padding-top: 20px !important; }
+    .tourTablaBootstrap button {
+      padding: 5px;
+      border-radius: 10px;
+      font-size: 14px; } }
 
 /*  ******************************* FIN TOUR ******************************* */
 /******************************** CONTACTO DESKTOP ******************************* */
@@ -391,7 +384,8 @@ main {
     padding-bottom: 10px; }
   .intImg {
     width: 80%;
-    padding-bottom: 15px; }
+    padding-bottom: 15px;
+    /*max-width: 254px;*/ }
   .int1 {
     grid-area: int1; }
   .int2 {

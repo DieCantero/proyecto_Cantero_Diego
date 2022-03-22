@@ -1,15 +1,15 @@
 /*  ******************************* TOUR MAIN ******************************* */
 
-.tourTablaBootstrap {
+@mixin btnTour ( $colorletra , $colorLetraHover , $colorFondo ) {
     border: solid 1px rgb(218, 218, 218);
     max-width: 580px;
     margin: auto;
     margin-bottom: 100px;
-    color: $colorTexto-ColorHover !important;
+    color: $colorletra !important;
 
     & tr:hover {
-        background-color: $colorTexto-ColorHover;
-        color: white;
+        color: $colorLetraHover;
+        background-color: $colorFondo;
     }
 
     & td {
@@ -23,6 +23,20 @@
         font-size: 14px;
     }
 }
+/*desktop*/
+@media only screen and (min-width: 600px) {
+    .tourTablaBootstrap {
+        @include btnTour ( rgb(252, 148, 43), rgb(255, 255, 255) , rgb(252, 148, 43) );
+    }
+}
+
+/*mobile*/
+@media only screen and (max-width: 600px) {
+    .tourTablaBootstrap {
+        @include btnTour ( rgb(252, 148, 43), rgb(252, 148, 43) , rgb(61, 76, 43) );
+    }
+}
+
 
 
 /*  ******************************* FIN TOUR ******************************* */
