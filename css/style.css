@@ -385,7 +385,7 @@ main {
   .intImg {
     width: 80%;
     padding-bottom: 15px;
-    /*max-width: 254px;*/ }
+    max-width: 254px; }
   .int1 {
     grid-area: int1; }
   .int2 {
