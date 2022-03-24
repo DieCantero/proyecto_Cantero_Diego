@@ -353,8 +353,9 @@ main {
   .grilla {
     display: grid;
     grid-template-columns: 20% 20% 20% 20% 20%;
-    grid-template-rows: 400px 80px 540px;
-    grid-template-areas: "banda banda banda texto texto" "titulo titulo titulo titulo titulo" "int1 int2 int3 int4 int5"; }
+    grid-template-rows: 400px 80px 560px;
+    grid-template-areas: "banda banda banda texto texto" "titulo titulo titulo titulo titulo" "int1 int2 int3 int4 int5";
+    padding: 0 15px; }
   .imgBanda {
     grid-area: banda;
     max-width: 650px;
@@ -397,7 +398,7 @@ main {
   .int5 {
     grid-area: int5; }
   .cardTransform:hover {
-    transform: scale(1.1, 1.1);
+    transform: scale(1.05, 1.05);
     background-color: #fc942b;
     color: white;
     border: 3px solid #e26b25;
@@ -428,7 +429,7 @@ main {
     padding-bottom: 15px;
     max-height: 430px;
     max-width: 264px; }
-  .int1, .int2, .int3, .int4, .int5 {
+  .displayCards, .int1, .int2, .int3, .int4, .int5 {
     display: flex;
     flex-direction: column;
     align-items: center; }

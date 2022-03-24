@@ -16,7 +16,6 @@ body {
     font-family: 'Lora', serif;
 }
 
-
 nav {
     margin: 0 !important;
     padding: 0 !important;
@@ -134,10 +133,11 @@ main {
     .grilla {
         display: grid;
         grid-template-columns: 20% 20% 20% 20% 20%;
-        grid-template-rows: 400px 80px 540px;
+        grid-template-rows: 400px 80px 560px;
         grid-template-areas: "banda banda banda texto texto"
                             "titulo titulo titulo titulo titulo"
                             "int1 int2 int3 int4 int5";
+        padding: 0 15px;
     
     }
 
@@ -216,7 +216,7 @@ main {
     }
 
     .cardTransform:hover {
-        transform: scale(1.1, 1.1);
+        transform: scale(1.05, 1.05);
         background-color: $colorTexto-ColorHover;
         color: white;
         border: 3px solid rgb(226, 107, 37);
@@ -275,7 +275,7 @@ main {
         max-width: 264px;
     }
 
-    .int1, .int2, .int3, .int4, .int5{
+    .displayCards {
         display: flex;
         flex-direction: column; 
         align-items: center;
@@ -288,22 +288,27 @@ main {
 
     .int1 {
         grid-area: int1;
+        @extend .displayCards;
     }
 
     .int2 {
         grid-area: int2;
+        @extend .displayCards;
     }
 
     .int3 {
         grid-area: int3;
+        @extend .displayCards;
     }
 
     .int4 {
         grid-area: int4;
+        @extend .displayCards;
     }
 
     .int5 {
         grid-area: int5;
+        @extend .displayCards;
     }
 
     ul {
