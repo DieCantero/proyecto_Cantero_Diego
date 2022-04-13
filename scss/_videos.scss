@@ -1,13 +1,11 @@
-/*  ************************************* VIDEOS DESKTOP ******************************* */
+/*  ************************************* MIXIM VIDEOS DESKTOP ******************************* */
 
-@media only screen and (min-width: 600px) {
-
-    
+@mixin desktopVideos ( $paddingLeft , $columLeft , $columRight ) {
 
     .videosGrilla {
         margin: 0 50px;
         display: grid;
-        grid-template-columns: 50% 50%;
+        grid-template-columns: $columLeft $columRight;
         grid-template-rows: 70px 380px 380px 70px 380px;
         grid-template-areas: "titulovid1 titulovid1"
                             "infovid video1"
@@ -22,7 +20,7 @@
 
     .infovid {
         grid-area: infovid;
-        padding-left: 50%;
+        padding-left: $paddingLeft;
     }
 
     .video1 {
@@ -31,7 +29,7 @@
 
     .infovid2 {
         grid-area: infovid2;
-        padding-left: 50%;
+        padding-left: $paddingLeft;
     }
 
     .video2 {
@@ -44,7 +42,7 @@
 
     .infovid3 {
         grid-area: infovid3;
-        padding-left: 50%;
+        padding-left: $paddingLeft;
     }
 
     .video3 {
@@ -53,8 +51,29 @@
 
 }
 
+/*  ******************************* FIN VIDEOS MIXIN DESKTOP ******************************* */
 
-/*  ******************************* FIN VIDEOS MAIN ******************************* */
+/*  ******************************* VIDEOS DESKTOP FULL ******************************* */
+
+@media only screen and (min-width: 1201px) {
+
+    @include desktopVideos (50% , 50% , 50% )
+
+}
+
+/*  ******************************* FIN VIDEOS DESKTOP FULL ******************************* */
+
+/*  ******************************* VIDEOS DESKTOP MEDIUM ******************************* */
+
+@media only screen and (min-width: 601px) and (max-width: 1200px) {
+
+    @include desktopVideos (25% , 30% , 70% )
+
+}
+
+/*  ******************************* FIN VIDEOS DESKTOP MEDIUM ******************************* */
+
+
 /*  ************************************* VIDEOS MOBILE ******************************* */
 @media only screen and (max-width: 600px) {
 

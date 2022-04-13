@@ -14,7 +14,13 @@
 body {
     color: $colorTexto-ColorHover;
     font-family: 'Lora', serif;
+    font-weight: bolder;
 }
+
+h1, h2, h3 {
+    font-weight: bolder;
+}
+
 
 nav {
     margin: 0 !important;
@@ -81,6 +87,7 @@ a {
 
 li {
     list-style-type: none;
+    font-size: 1.1em;
 }
 
 .tituloH2 {
@@ -89,6 +96,10 @@ li {
     padding-top: 20px;
     padding-bottom: 30px;
     text-align: center;
+}
+
+body {
+    background-color: $colorFondoMain;
 }
 
 
@@ -127,13 +138,13 @@ main {
 
 /******************************** INDEX DESKTOP **********************************/
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 1351px) {
 
 
     .grilla {
         display: grid;
         grid-template-columns: 20% 20% 20% 20% 20%;
-        grid-template-rows: 400px 80px 560px;
+        grid-template-rows: 400px 80px 560px 20px;
         grid-template-areas: "banda banda banda texto texto"
                             "titulo titulo titulo titulo titulo"
                             "int1 int2 int3 int4 int5";
@@ -225,6 +236,103 @@ main {
 }
 
 /************************************** INDEX FIN DESKTOP  ************************************************/
+
+/************************************** INDEX 1350px  ************************************************/
+@media only screen and (min-width: 601px) and (max-width: 1350px) {
+
+
+    .grilla {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 200px 400px 80px 560px 560px 560px;
+        grid-template-areas:"texto texto"
+                            "banda banda"
+                            "titulo titulo"
+                            "int1 int2" 
+                            "int3 int4"
+                            "int5 int5";
+        padding: 0 10%;
+    
+    }
+
+
+    .imgBanda  {
+        grid-area: banda;
+        max-width: 650px;
+        justify-self: center;
+        align-self: center;
+        padding-left: 15px;
+    }
+
+
+
+    .textoBanda {
+        grid-area: texto;
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        justify-content: baseline;
+        padding: 0 25px;
+    }
+
+    .textoBanda h2 {
+        padding: 20px 0;
+    }
+
+
+
+    .titulo {
+        grid-area: titulo;
+        justify-self: center;
+        align-self: center;
+    }
+
+
+
+    .int1, .int2, .int3, .int4, .int5{
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    div h3 {
+        padding-bottom: 15px;
+    }
+
+    div ul {
+        padding-bottom: 10px;
+    }
+
+    .intImg { 
+        width: 80%;
+        padding-bottom: 15px;
+        max-width: 254px;
+    }
+
+    .int1 {
+        grid-area: int1;
+    }
+
+    .int2 {
+        grid-area: int2;
+    }
+
+    .int3 {
+        grid-area: int3;
+    }
+
+    .int4 {
+        grid-area: int4;
+    }
+
+    .int5 {
+        grid-area: int5;
+        padding: 0 130px;
+    }
+
+}
+/************************************** INDEX 1350px FIN   ************************************************/
+
 
 /**************************************     INDEX MOBILE  ************************************************/
 
