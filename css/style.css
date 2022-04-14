@@ -125,12 +125,73 @@
 
 /*  ******************************* FIN DISCOGRAFIA MDE ******************************* */
 /******************************** DISCOGRAFIA MOBILE ******************************* */
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 451px) and (max-width: 600px) {
   .discografiaGrilla {
     margin: 0 0;
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 80px 50px 200px 800px 50px 180px 800px 50px 250px 800px 50px 280px 800px 50px 340px 800px 50px 300px 800px 50px 320px 800px 50px 230px 800px 50px 230px 800px 30px;
+    grid-template-areas: "titulo0" "titulo1" "info1" "disco1" "titulo2" "info2" "disco2" "titulo3" "info3" "disco3" "titulo4" "info4" "disco4" "titulo5" "info5" "disco5" "titulo6" "info6" "disco6" "titulo7" "info7" "disco7" "titulo8" "info8" "disco8" "titulo9" "info9" "disco9"; }
+    .discografiaGrilla .discos img {
+      width: 390px;
+      max-height: 390px;
+      margin-bottom: 15px; }
+    .discografiaGrilla section {
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+    .discografiaGrilla h3 {
+      font-size: 20px; }
+  .titulo0 {
+    grid-area: titulo0;
+    font-size: 28px; }
+  .titulo1 {
+    grid-area: titulo1; }
+  .info1 {
+    grid-area: info1; }
+  .disco1 {
+    grid-area: disco1; }
+  .titulo2 {
+    grid-area: titulo2; }
+  .disco2 {
+    grid-area: disco2; }
+  .titulo3 {
+    grid-area: titulo3; }
+  .disco3 {
+    grid-area: disco3; }
+  .titulo4 {
+    grid-area: titulo4; }
+  .disco4 {
+    grid-area: disco4; }
+  .titulo5 {
+    grid-area: titulo5; }
+  .disco5 {
+    grid-area: disco5; }
+  .titulo6 {
+    grid-area: titulo6; }
+  .disco6 {
+    grid-area: disco6; }
+  .titulo7 {
+    grid-area: titulo7; }
+  .disco7 {
+    grid-area: disco7; }
+  .titulo8 {
+    grid-area: titulo8; }
+  .disco8 {
+    grid-area: disco8; }
+  .titulo9 {
+    grid-area: titulo9; }
+  .disco9 {
+    grid-area: disco9; } }
+
+/*  ******************************* FIN DISCOGRAFIA MOBILE ******************************* */
+/******************************** DISCOGRAFIA SM ******************************* */
+@media only screen and (max-width: 450px) {
+  .discografiaGrilla {
+    margin: 0 0;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 80px 50px 260px 800px 50px 220px 800px 50px 310px 800px 50px 360px 800px 50px 400px 800px 50px 340px 800px 50px 410px 800px 50px 270px 800px 50px 290px 800px 30px;
     grid-template-areas: "titulo0" "titulo1" "info1" "disco1" "titulo2" "info2" "disco2" "titulo3" "info3" "disco3" "titulo4" "info4" "disco4" "titulo5" "info5" "disco5" "titulo6" "info6" "disco6" "titulo7" "info7" "disco7" "titulo8" "info8" "disco8" "titulo9" "info9" "disco9"; }
     .discografiaGrilla .discos img {
       width: 390px;
@@ -619,7 +680,7 @@ main {
   .grilla {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 240px 320px 50px 500px 500px 500px 500px 500px;
+    grid-template-rows: 290px 320px 50px 500px 500px 500px 500px 500px;
     grid-template-areas: "tituloBanda" "imagenBanda" "integrantes" "int1" "int2" "int3" "int4" "int5"; }
   .tituloBanda {
     grid-area: tituloBanda;

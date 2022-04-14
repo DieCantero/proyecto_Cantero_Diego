@@ -155,14 +155,14 @@
 
 /*  ******************************* DISCOGRAFIA MIXIN ******************************* */
 
-@mixin discoMedMob ( $margin ) {
+@mixin discoMedMob ( $margin , $info1 , $info2 , $info3 , $info4 , $info5 , $info6 , $info7 , $info8 , $info9) {
 
 
     .discografiaGrilla {
         margin: 0 $margin ;
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows: 80px 50px 200px 800px 50px 180px 800px 50px 250px 800px 50px 280px 800px 50px 340px 800px 50px 300px 800px 50px 320px 800px 50px 230px 800px 50px 230px 800px 30px; 
+        grid-template-rows: 80px 50px $info1 800px 50px $info2 800px 50px $info3 800px 50px $info4 800px 50px $info5 800px 50px $info6 800px 50px $info7 800px 50px $info8 800px 50px $info9 800px 30px; 
         grid-template-areas:"titulo0"
                             "titulo1"
                             "info1"
@@ -300,7 +300,7 @@
 /******************************** DISCOGRAFIA MED ******************************* */
 
 @media only screen and (min-width: 601px) and (max-width: 800px) {
-    @include discoMedMob ( 20px )
+    @include discoMedMob ( 20px , 200px , 180px , 250px , 280px , 340px , 300px , 320px, 230px , 230px )
 }
 
 
@@ -308,8 +308,17 @@
 
 /******************************** DISCOGRAFIA MOBILE ******************************* */
 
-@media only screen and (max-width: 600px) {
-    @include discoMedMob ( 0 )
+@media only screen and (min-width: 451px) and (max-width: 600px) {
+    @include discoMedMob ( 0 , 200px , 180px , 250px , 280px , 340px , 300px , 320px, 230px , 230px )
+}
+
+
+/*  ******************************* FIN DISCOGRAFIA MOBILE ******************************* */
+
+/******************************** DISCOGRAFIA SM ******************************* */
+
+@media only screen and (max-width: 450px) {
+    @include discoMedMob ( 0 , 260px , 220px , 310px , 360px , 400px , 340px , 410px, 270px , 290px )
 }
 
 
